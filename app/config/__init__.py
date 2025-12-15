@@ -1,6 +1,7 @@
 import os
 
 class Config:
-    DEBUG = os.getenv('FLASK_DEBUG', False)
-    TESTING = os.getenv('FLASK_TESTING', False)
-    DATABASE_URI = os.getenv('DATABASE_URI', 'sqlite:///default.db')
+    SECRET_KEY = os.getenv('SECRET_KEY', 'supersecretkey')
+    SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URL', 'sqlite:///app.db')
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
+    DEBUG = os.getenv('DEBUG', 'false').lower() in ['true', '1']

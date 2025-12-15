@@ -1,5 +1,10 @@
 from flask import Blueprint
-from controllers.example_controller import example_bp
+
+main_bp = Blueprint('main', __name__)
+
+@main_bp.route('/')
+def home():
+    return 'Hello, World!'
 
 def register_routes(app):
-    app.register_blueprint(example_bp)
+    app.register_blueprint(main_bp)
