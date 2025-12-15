@@ -1,1 +1,0 @@
-This folder contains the checkout_service module.
