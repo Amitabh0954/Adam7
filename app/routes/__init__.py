@@ -1,3 +1,4 @@
+from flask import Blueprint
 from app.controllers.example_controller import example_bp
 
 def register_routes(app):
