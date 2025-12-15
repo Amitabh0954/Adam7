@@ -9,8 +9,8 @@ register_routes(app)
 
 @app.errorhandler(Exception)
 def handle_exception(e):
-    response = {'error': str(e)}
-    return jsonify(response), 500
+ response = {'error': str(e)}
+ return jsonify(response), 500
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+ app.run(host='0.0.0.0', port=5000)
